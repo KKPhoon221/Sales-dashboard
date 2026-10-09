@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Outlet Performance</title>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Outlet performance</h1>
+      <div class="sub" id="period"></div>
+    </div>
+    <div class="filter" id="filter" role="group" aria-label="Filter by outlet"></div>
+  </header>
+
+  <section class="kpis">
+    <div class="card kpi"><div class="label">Total sales</div><div class="value" id="kpi-sales">–</div><div class="note" id="kpi-sales-note"></div></div>
+    <div class="card kpi accent"><div class="label">% of target</div><div class="value" id="kpi-pct">–</div><div class="note" id="kpi-pct-note"></div></div>
+    <div class="card kpi"><div class="label">Orders</div><div class="value" id="kpi-orders">–</div><div class="note" id="kpi-orders-note"></div></div>
+    <div class="card kpi"><div class="label">Returns %</div><div class="value" id="kpi-returns">–</div><div class="note" id="kpi-returns-note"></div></div>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <h2>Sales vs target <small>by outlet-week</small></h2>
+      <div class="bars" id="bars"></div>
+      <div class="legend">
+        <span><i style="background:var(--bar)"></i>At or above 90%</span>
+        <span><i style="background:var(--bad)"></i>Below 90%</span>
+        <span><i style="background:none;border-left:2px solid var(--text);border-radius:0"></i>100% target</span>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Needs attention <small id="alert-count"></small></h2>
+      <ul class="alerts" id="alerts"></ul>
+    </div>
+  </section>
+</div><script type="module" src="/src/main.js"></script>
+</body>
+</html>
